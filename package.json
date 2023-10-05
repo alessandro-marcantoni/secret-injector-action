@@ -1,0 +1,20 @@
+{
+  "name": "secret-injector-action",
+  "version": "1.0.0",
+  "description": "Action to substitute secrets and env variables referenced in repository files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "build": "ncc build index.js --license LICENSE"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alessandro-marcantoni/secret-injector-action"
+  },
+  "author": "alessandro-marcantoni",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "1.10.1",
+    "istextorbinary": "6.0.0"
+  }
+}

@@ -1,0 +1,25 @@
+name: Test Action
+
+on: [push]
+env:
+  foo: ${{ secrets.FOO }}
+  bar: "bar_content"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run Action
+        uses: alessandro-marcantoni/secret-injector-action@main
+        with:
+          secrets: ${{ toJson(secrets) }}
+          env: ${{ toJson(env) }}
+      - name: Check file content
+        env:
+          secrets: ${{ toJson(secrets) }}
+          env: ${{ toJson(env) }}
+        run: |
+          node test.js

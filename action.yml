@@ -1,0 +1,19 @@
+name: "Secret Injector Action"
+author: "github.com/alessandro-marcantoni"
+description: "Action to substitute secrets and env variables referenced in repository files."
+inputs:
+  secrets:
+    description: "Action secrets"
+    required: false
+    default: "undefined"
+  env:
+    description: "Action env variables"
+    required: false
+    default: "undefined"
+runs:
+  using: node20
+  main: 'dist/index.js'
+
+branding:
+  icon: "activity"
+  color: "green"

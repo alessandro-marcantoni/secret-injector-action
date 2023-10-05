@@ -1,0 +1,5 @@
+{
+  "foo": "${{ env.foo }}",
+  "bar": "${{ env.bar }}",
+  "baz": "${{ secrets.BAZ }}"
+}
