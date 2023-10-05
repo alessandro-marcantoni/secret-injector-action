@@ -1,6 +1,14 @@
 name: Test Action
 
-on: [push]
+on:
+  push:
+    paths-ignore:
+      - .gitignore
+      - LICENSE
+      - README.md
+      - CHANGELOG.md
+      - renovate.json
+
 env:
   foo: ${{ secrets.FOO }}
   bar: "bar_content"

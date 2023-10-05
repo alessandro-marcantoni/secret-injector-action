@@ -1,6 +1,6 @@
 name: "Secret Injector Action"
 author: "github.com/alessandro-marcantoni"
-description: "Action to substitute secrets and env variables referenced in repository files."
+description: "Action to replace secrets and env variables referenced in repository files."
 inputs:
   secrets:
     description: "Action secrets"
